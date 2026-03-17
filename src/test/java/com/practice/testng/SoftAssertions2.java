@@ -1,19 +1,18 @@
 package com.practice.testng;
 
-
-import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import org.testng.annotations.Test;
 
 
 public class SoftAssertions2 {
     @Test
-	public static void test() {
-		int exp=30;
+	public  void test() {
+		int exp=130;
 		int a=110;    //int a=110;
 		int b=20;
 		int c=a+b;
 		SoftAssert sf= new SoftAssert();
-		//sf.assertEquals(c, exp);   //130==30 --> false so  test failed  
+		sf.assertEquals(c, exp);   //130==30 --> false so  test failed  
 		//if we write any code or statement  after the failed test it will be executed
 		System.out.println("my name");   //eventhough test got failed 
 		//to record the outcome of tests we have to use assertAll() 
@@ -26,10 +25,10 @@ public class SoftAssertions2 {
 	
     
         //SoftAssert sf= new SoftAssert();
-	    sf.assertTrue(false);    //expecting true , but actual value is false   :  test failed
+	    sf.assertTrue(true);    //expecting true , but actual value is false   :  test failed
 		
 		sf.assertEquals(c, exp);
-		//sf.assertAll();
+		sf.assertAll();
 		//now test will be failed b/c the outcome of this is false but it will not be recorded
     }
     
