@@ -1,1 +1,10 @@
-/target/
+target/
+test-output/
+Reports/
+allure-results/
+.settings/
+.project
+.classpath
+bin/
+*.log
+/arget/

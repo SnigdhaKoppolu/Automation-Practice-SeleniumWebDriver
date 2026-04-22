@@ -11,12 +11,11 @@ public void loginTest() {
 	WebDriver driver = new ChromeDriver();
 	driver.manage().window().maximize();
 	driver.manage().deleteAllCookies();
-	driver.get("https://www.saucedemo.com/v1/inventory.html");
-	driver.findElement(By.id("user-name")).sendKeys("standard_user");
-	driver.findElement(By.id("password")).sendKeys("secret_sauce");
-	//driver.findElement(By.id("login-button")).click();
-	driver.findElement(By.xpath("//input[@id='login-button']")).click();
-	//driver.findElement(By.xpath("//input[@value='Login']")).click();
-	//driver.findElement(By.cssSelector("#login-button")).click();
+	driver.get("https://letcode.in/login");
+
+	driver.findElement(By.xpath("//input[@placeholder='Enter Username']")).sendKeys("mor_2314");
+	driver.findElement(By.xpath("//input[@type='password']")).sendKeys("83r5^_");
+	driver.findElement(By.xpath("//button[text()='Login']")).click();
+	
 }
 }
